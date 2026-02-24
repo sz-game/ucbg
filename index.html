@@ -48,10 +48,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="UCBG" />
   <link rel="manifest" href="/site.webmanifest" />
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
-  <script src="/ucbg/assets/js/load-games.js?v=3.2.9"></script>
-  <script src="/ucbg/assets/js/recent_games.js"></script>
-  <script src="/ucbg/assets/js/theme.js?v=3.6.0"></script>
 
   <meta name="robots" content="noindex, nofollow" />
 </head>
@@ -1609,13 +1605,6 @@
     </div>
   </div>
 
-  <script defer="" src="/ucbg/assets/theme/js/jquery.min.js?v=1.0.0"></script>
-  <script defer="" src="/ucbg/assets/theme/js/bootstrap.js?v=1.0.40"></script>
-  <script defer="" src="/ucbg/assets/theme/js/lazysizes.js?v=1.0.0"></script>
-  <script defer="" src="/ucbg/assets/theme/js/main.js?v=1.0.0"></script>
-  <script src="/ucbg/assets/js/favorite.js"></script>
-  <script defer="" src="/ucbg/assets/theme/js/navbar-modern.js?v=1.1.0"></script>
-  <script src="https://comment.silecekci.com/embed.js"></script>
   <div class="footer py-2 mt-auto">
     <div class="container-fluid">
       <div class="row align-items-center no-gutters py-2 fs-14">
@@ -1660,15 +1649,6 @@
     </div>
   </div>
  
-  <script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-      document.getElementById("search").focus();
-    });
-  </script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <script src="/ucbg/assets/js/populate-games.js"></script><script> document.addEventListener('DOMContentLoaded', function () { const btn = document.getElementById('random-game-btn'); if (!btn) return; let gamesCache = null; async function loadGames() { if (gamesCache) return gamesCache; try { const res = await fetch('/data-json/games.json?v=2.0.111', {cache: 'no-store'}); if (!res.ok) throw new Error('Failed to load games'); gamesCache = await res.json(); return gamesCache; } catch (err) { console.error('Random game load error', err); return null; } } btn.addEventListener('click', async function (e) { e.preventDefault(); const games = await loadGames(); if (!games || !games.length) { window.location.href = '/category/new.html'; return; } const g = games[Math.floor(Math.random() * games.length)]; if (g && g.url) window.location.href = g.url; else window.location.href = '/'; }); }); </script>
 </body>
 
 </html>
